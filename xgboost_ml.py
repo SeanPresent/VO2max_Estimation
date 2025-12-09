@@ -272,4 +272,4 @@ tuned_model = tune_model(xgboost,fold=5,
                          choose_better = True,
                          return_train_score = True)
 
-save_model(tuned_model, '/Users/s-alpha/Desktop/VO2peak-prediction-main/20240423_best_tuned_xgb_VO2max_model')
+save_model(tuned_model, '/Users/daeeon/Desktop/VO2peak-prediction-main/20240423_best_tuned_xgb_VO2max_model')
