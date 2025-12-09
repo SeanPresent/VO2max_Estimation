@@ -1,0 +1,24 @@
+"""
+Utility modules
+"""
+
+from .constants import (
+    MALE_VO2MAX_CRITERIA,
+    FEMALE_VO2MAX_CRITERIA,
+    MIN_AGE,
+    MAX_AGE,
+    NUMERICAL_FEATURES,
+    CATEGORICAL_FEATURES,
+    TARGET_COLUMN
+)
+
+__all__ = [
+    'MALE_VO2MAX_CRITERIA',
+    'FEMALE_VO2MAX_CRITERIA',
+    'MIN_AGE',
+    'MAX_AGE',
+    'NUMERICAL_FEATURES',
+    'CATEGORICAL_FEATURES',
+    'TARGET_COLUMN'
+]
+

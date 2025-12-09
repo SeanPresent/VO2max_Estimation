@@ -1,0 +1,76 @@
+# VO2max Estimation 프로젝트 설정 파일
+# 이 파일을 config.yaml로 복사하여 사용하세요
+
+data:
+  # 데이터 파일 경로
+  subject_info_path: "data/raw/subject-info.csv"
+  test_measure_path: "data/raw/test_measure.csv"
+  
+  # 데이터 분할 설정
+  train_test_split: 0.2
+  random_state: 42
+  split_by_subject: true  # True: subject-level split, False: random split
+
+preprocessing:
+  # 나이 필터링
+  min_age: 19
+  max_age: 80
+  
+  # 다중공선성 제거
+  remove_multicollinearity: true
+  multicollinearity_threshold: 0.90
+  
+  # 데이터 변환
+  transformation: true
+
+features:
+  # 수치형 특징
+  numerical: ['Age', 'Weight', 'Height', 'HR', 'Sex', 'time']
+  
+  # 범주형 특징
+  categorical: ['Sex']
+  
+  # 타겟 변수
+  target: 'VO2_ml_kg_min'
+
+model:
+  # 모델 타입
+  name: "xgboost"
+  
+  # 교차 검증
+  cv_folds: 5
+  
+  # 최적화 메트릭
+  optimize_metric: "MAPE"
+  
+  # 모델 저장 경로
+  save_path: "models/best_xgboost_model.pkl"
+  
+  # PyCaret 설정
+  session_id: 77
+
+evaluation:
+  # 평가 메트릭 목록
+  metrics: ['MAE', 'MSE', 'RMSE', 'R2', 'RMSLE', 'MAPE']
+  
+  # 결과 저장 경로
+  results_dir: "results/reports"
+
+visualization:
+  # 그래프 저장 경로
+  figures_dir: "results/figures"
+  
+  # 한글 폰트 설정 (macOS)
+  font_family: "AppleGothic"
+  
+  # 그래프 스타일
+  style: "seaborn"
+  palette: "coolwarm"
+
+logging:
+  # 로그 레벨
+  level: "INFO"
+  
+  # 로그 파일 경로
+  log_file: "results/logs/training.log"
+
