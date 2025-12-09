@@ -37,6 +37,8 @@ This project implements a machine learning regression model to estimate continuo
 
 The dataset is sourced from **PhysioNet** and contains cardiorespiratory measurements from 992 treadmill tests conducted at the University of Malaga's Exercise Physiology and Human Performance Lab (2008-2018).
 
+**Dataset Source**: [Treadmill Maximal Exercise Tests from the Exercise Physiology and Human Performance Lab of the University of Malaga](https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/)
+
 ### Dataset Characteristics
 - **Participants**: 992 individuals
 - **Age Range**: 10-63 years
@@ -51,6 +53,11 @@ The dataset is sourced from **PhysioNet** and contains cardiorespiratory measure
 - `Sex`: Gender (0: Male, 1: Female)
 - `Time`: Exercise time (minutes)
 - `VO2`: Oxygen consumption (mL/min) → converted to `VO2_ml_kg_min` (mL/kg/min)
+
+### Data Download
+To download the dataset, visit the [PhysioNet dataset page](https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/) and download:
+- `subject-info.csv`: Subject demographic information
+- `test_measure.csv`: Cardiorespiratory measurements during exercise tests
 
 ## 🔬 Methodology
 
@@ -252,7 +259,10 @@ If you use this code or methodology in your research, please cite:
 }
 ```
 
-**Paper**: Hong, D.; Sun, S. Machine Learning Regressors to Estimate Continuous Oxygen Uptakes (V̇O₂). *Appl. Sci.* 2024, 14, 7888. https://doi.org/10.3390/app14177888
+**Paper**: Hong, D.; Sun, S. Machine Learning Regressors to Estimate Continuous Oxygen Uptakes (V̇O₂). *Appl. Sci.* 2024, 14, 7888.
+
+- **Full Text**: [MDPI Applied Sciences](https://www.mdpi.com/2076-3417/14/17/7888)
+- **DOI**: https://doi.org/10.3390/app14177888
 
 ## 📄 License
 
@@ -268,8 +278,20 @@ See the [LICENSE](LICENSE) file for details.
 ## 🙏 Acknowledgments
 
 - University of Malaga's Exercise Physiology and Human Performance Lab for providing the dataset
-- PhysioNet for hosting the dataset
+- [PhysioNet](https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/) for hosting the dataset
 - PyCaret community for the excellent ML framework
+
+### Dataset Citation
+When using the dataset, please cite:
+```bibtex
+@misc{mongin2021treadmill,
+  title={Treadmill Maximal Exercise Tests from the Exercise Physiology and Human Performance Lab of the University of Malaga},
+  author={Mongin, Denis and García Romero, Jeronimo and Alvero Cruz, Jose Ramon},
+  year={2021},
+  publisher={PhysioNet},
+  doi={10.13026/7ezk-j442}
+}
+```
 
 ## 📧 Contact
 
@@ -279,5 +301,5 @@ For questions or collaborations, please contact:
 
 ---
 
-**Note**: This project is part of research published in Applied Sciences (MDPI). For detailed methodology and results, please refer to the published paper.
+**Note**: This project is part of research published in Applied Sciences (MDPI). For detailed methodology and results, please refer to the [published paper](https://www.mdpi.com/2076-3417/14/17/7888).
 
